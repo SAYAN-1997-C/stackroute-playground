@@ -2,6 +2,8 @@ package com.stackroute.daytwo;
 
 import java.util.Scanner;
 
+
+
 public class SampleArray {
 
 	public static void main(String[] args)
@@ -67,7 +69,7 @@ public class SampleArray {
 			String destin[]= {"Coffee","Tea","Snacks","abc","def","efg"};
 			
 			
-			System.arraycopy(source, 0, destin, 3,2);
+			System.arraycopy(source, 0, destin, 3,3);
 			
 			for(int i=0;i<destin.length;i++)
 			System.out.println(destin[i]);
