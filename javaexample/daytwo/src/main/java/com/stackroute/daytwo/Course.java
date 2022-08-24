@@ -10,6 +10,7 @@ public class Course {
 	{
 		Course course=new Course();
 		
+		System.out.println("Enter coursename and duration ");
 		String name=course.getInput();
 		String duration=course.getInput();
 		
@@ -20,7 +21,7 @@ public class Course {
 	
 	String getInput()
 	{
-		System.out.println("Enter course name");
+
 		return scan.nextLine();
 	}
 	
