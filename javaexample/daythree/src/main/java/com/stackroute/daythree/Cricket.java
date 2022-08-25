@@ -8,9 +8,13 @@ public class Cricket extends Game{
 	  
 	  Cricket()
 	  {
+		//  super("outdoor","cricket");
+		  
 		  System.out.println("child class cricket - consturctor invoked");
-		  gameType="outdoor";
-		  gameName="cricket";
+//		  gameType="outdoor";
+//		  gameName="cricket";
+		  
+		  
 		  matchName="World cup";
 		  venue="Australia";
 	  }
@@ -19,7 +23,7 @@ public class Cricket extends Game{
 
 	  
 	public String toString() {
-		display();
+		//display();
 		return "Cricket [matchName=" + matchName + ", venue=" + venue + "]";
 	}
 

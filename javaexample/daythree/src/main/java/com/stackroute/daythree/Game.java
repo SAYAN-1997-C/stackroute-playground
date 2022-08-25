@@ -1,8 +1,9 @@
 package com.stackroute.daythree;
 
 public class Game {
-        
-	String gameType;
+
+	//data hiding
+ 	String gameType;
 	String gameName;
 	
 	public Game()
