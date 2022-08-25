@@ -4,17 +4,30 @@ public class VehicleProcess {
 
 	public static void main(String[] args) {
 	 
-		Twowheeler twowheelobj=new Twowheeler();
+//		Twowheeler twowheelobj=new Twowheeler();
+//		
+//		
+//		twowheelobj.setPolicy();
+//		twowheelobj.display2();
+//		
+//		
+//		Fourwheeler fourobj=new Fourwheeler();
+//		
+//		fourobj.setPolicy();
+//		fourobj.display4();
 		
 		
-		twowheelobj.setPolicy();
-		twowheelobj.display2();
+		Engine engine;
+		
+		engine=new Twowheeler();
+		
+       
 		
 		
-		Fourwheeler fourobj=new Fourwheeler();
-		
-		fourobj.setPolicy();
-		fourobj.display4();
+//   Twowheeler two=(Twowheeler)	engine;
+   
+   
+   
 
 	}
 
