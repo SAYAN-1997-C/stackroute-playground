@@ -8,7 +8,9 @@ public class CardioHospital  extends Hospital{
 	{
 		
 		System.out.println(doctor + "hospitalname " + name);
+		
+	 
 	}
-	
+
 	
 }
