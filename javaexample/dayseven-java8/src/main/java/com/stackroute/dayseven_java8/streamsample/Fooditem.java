@@ -1,18 +1,38 @@
 package com.stackroute.dayseven_java8.streamsample;
-
+class Address
+{
+	String street;
+	String pincode;
+}
 public class Fooditem {
 
 	String itemName;
 	int price;
 	int qty;
 	String type;
+	Address addr;
 
+	public Address getAddr() {
+		return addr;
+	}
+	public void setAddr(Address addr) {
+		this.addr = addr;
+	}
 	public Fooditem(String itemName, int price, int qty, String type) {
 		super();
 		this.itemName = itemName;
 		this.price = price;
 		this.qty = qty;
 		this.type = type;
+	 
+	}
+	public Fooditem(String itemName, int price, int qty, String type,Address addr) {
+		super();
+		this.itemName = itemName;
+		this.price = price;
+		this.qty = qty;
+		this.type = type;
+		this.addr=addr;
 	}
 	public String getItemName() {
 		return itemName;

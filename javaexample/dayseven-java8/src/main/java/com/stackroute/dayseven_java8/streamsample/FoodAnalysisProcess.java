@@ -1,6 +1,7 @@
 package com.stackroute.dayseven_java8.streamsample;
 
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -15,7 +16,10 @@ public class FoodAnalysisProcess {
 
 //1) list fooditems of given type
 
-     List<Fooditem> resulttype=  findFoodbyType("Tiffin");
+     Optional<List<Fooditem>> resulttype=  findFoodbyType("Tiffin");
+     
+     if (resulttype.isPresent())
+    	 System.out.println(resulttype.get());
      
    //  System.out.println(resulttype);
      
@@ -52,11 +56,15 @@ public class FoodAnalysisProcess {
 	}
 	
 	
-	public static List<Fooditem> findFoodbyType(String type)
+	public static Optional<List<Fooditem>> findFoodbyType(String type)
 	{
 		 
 	List<Fooditem> resultitems=	  items.stream().filter( fobj-> fobj.getType().equals(type)).collect(Collectors.toList());
-	return resultitems;
+	
+	if(!resultitems.isEmpty())
+	return Optional.of(resultitems);
+	else
+		return Optional.empty();
 		
 	}
 	
@@ -118,7 +126,7 @@ public class FoodAnalysisProcess {
 	System.out.println(sortedname) ;
 	
 	
-	List<Fooditem> sorteditems=items.stream().sorted(  Comparator.comparing( fobj -> fobj.getItemName())).collect(Collectors.toList());
+	LinkedList<Fooditem> sorteditems=items.stream().sorted(  Comparator.comparing( fobj -> fobj.getItemName())).collect(Collectors.toCollection( LinkedList::new));
 	System.out.println(sorteditems);
 	
 	  }
