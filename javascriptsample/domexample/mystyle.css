@@ -1,0 +1,16 @@
+.clsfrm
+
+{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0px auto;
+
+}
+
+section
+{
+    background: lightcoral;
+    text-align: center;
+    padding:20px;
+}
