@@ -1,0 +1,20 @@
+body
+{
+    background: skyblue !important;
+}
+
+img
+{
+   
+    height: 450px;
+}
+
+.row img
+{
+    width: 300px;
+    height: 300px;
+}
+
+p{
+    font-family: 'Dancing Script', cursive;
+}

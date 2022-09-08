@@ -1,0 +1,67 @@
+body,h1,h2,h3,ul
+{
+    margin: 0px;
+}
+
+header
+{
+    background: lightseagreen;
+    border-bottom: 4px solid red;
+}
+
+footer
+{
+    background: lightseagreen;
+    border-top: 4px solid red;
+}
+
+ul
+{
+list-style: none;
+}
+li
+{
+    display: inline;
+    padding: 10px;
+}
+
+nav
+{
+    text-align: center;
+}
+
+.sechero
+{
+   
+   background: url('./myimg/shopping.jpg'); 
+   background-repeat:repeat-x;
+   background-size:auto;
+   height: 250px;
+   text-align: center;
+   border-bottom: 2px lawngreen solid;
+}
+
+.clsdiv
+{
+    width: 400px;
+    padding: 10px;
+    background: blueviolet;
+    color: white;
+    margin: 0px auto;
+}
+
+
+.clspaper img
+{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.secbottom
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
