@@ -3,6 +3,7 @@ out/
 target/
 .idea/
 *.iml
+node-modules
 
 *.settings
 

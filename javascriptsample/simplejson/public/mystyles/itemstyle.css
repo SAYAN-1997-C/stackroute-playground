@@ -1,0 +1,11 @@
+.clsform
+{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#spatable
+{
+    padding: 20px;
+}

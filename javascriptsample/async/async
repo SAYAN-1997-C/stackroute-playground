@@ -1,0 +1,49 @@
+client  --> request  ( asynchro ) --> server
+
+
+server --> response (acknolow) 
+
+
+response
+  - Promise object
+
+  Promise  -->   success
+                 failure
+
+
+fetch() --- API
+            returns response as Promise
+
+
+design a api using spring boot and access them in front end (react)
+API --> helps us to access database (insert,delete,update,view)
+
+step 1)
+
+create a Datasource file --> json file 
+  fooditem.json
+
+step 2)
+
+use json-server : npm install -g json-server
+
+      to get fake api to access datasource (json file)
+
+
+step 3)
+     
+      connect html page with json-server
+
+step 4)
+
+    use javascript to call API functions for accessing(add,delete,view,modify) json file
+
+
+
+what is asynchro
+
+how AJAX works
+  what is fetch() api
+
+Promise object
+
