@@ -12,7 +12,7 @@ export default function Studentdashboard()
 
     const[studentarr,setStudentarr]=useState([])
 
-    const[newsarr,setNewsarr] =useState([])
+    // const[newsarr,setNewsarr] =useState([])
 
 const addEventHandler= (data)=>
 {
@@ -61,26 +61,40 @@ axios.delete(`http://localhost:3005/student/${childid}`)
     }
 
     useEffect(()=>{
-    console.log("use effect called");
-    axios.get('https://newsapi.org/v2/top-headlines?country=in&apikey=7f118af83e1b48f6939fc5096e89fd22&page=1')
-            .then
-            (
-                (res)=>
-                {
+ 
+    axios.get('http://localhost:3005/student')
+    .then
+    (
+        (res)=>
+        {
+          
+            console.log(res.data );
+         setStudentarr(res.data);
+             console.log(studentarr)
+        }
+    )
+    .catch
+    (
+        (err)=>console.log("error occured " + err)
+    )
+
+
+                },[] );
+
+    // ASSINGMENT sample
+    //  axios.get('https://newsapi.org/v2/top-headlines?country=in&apikey=7f118af83e1b48f6939fc5096e89fd22&page=1')
+    //         .then
+    //         (
+    //             (res)=>
+    //             {
                   
-                    console.log(res.data.articles);
-                 //   setStudentarr(res.data);
-                 setNewsarr(res.data.articles);
-                    console.log(studentarr)
-                }
-            )
-            .catch
-            (
-                (err)=>console.log("error occured " + err)
-            )
-
-
-                        },[] );
+    //                 console.log(res.data.articles);
+    //              //   setStudentarr(res.data);
+    //              setNewsarr(res.data.articles);
+    //                 console.log(studentarr)
+    //             }
+    //         )
+          
 
 
 return(
@@ -93,14 +107,14 @@ return(
  <div>
     {
 
-//      studentarr.map(stud=>
-// <Studentcard key={stud.id} id={stud.id} name={stud["name"]} subject={stud.subject} deleteItem={deleteEventhandler}/>
+     studentarr.map(stud=>
+<Studentcard key={stud.id} id={stud.id} name={stud["name"]} subject={stud.subject} deleteItem={deleteEventhandler}/>
         
-//         )
+        )
 
 
-  newsarr.map (news=>
-    <Newscard content={news.content} author={news.author} urlimg={news.urlToImage} />)
+//   newsarr.map (news=>
+//     <Newscard content={news.content} author={news.author} urlimg={news.urlToImage} />)
 
 
    }
