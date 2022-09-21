@@ -1,8 +1,28 @@
 import { useState } from "react";
 import './addstud.css';
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import { makeStyles } from '@material-ui/core/styles';
+import Alert from "./alert";
+
 
 export default function Addstudent(props)
 {
+
+
+    
+
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      width: '100%',
+      '& > * + *': {
+        marginTop: theme.spacing(2),
+      },
+    },
+  }));
+  
  
     const[id,setStudentid]=useState('');
     const[name,setName]=useState('');
@@ -16,11 +36,26 @@ export default function Addstudent(props)
          name,
          subject
      };
-     console.log(userdata)
+     console.log(userdata);
+    setOpen(true);
      props.addStudentEvt(userdata);
       
   })
 
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    setOpen(false);
+    if (reason === 'clickaway') {
+      return;
+    }
+  }
 
 
     return(
@@ -37,8 +72,17 @@ export default function Addstudent(props)
   
   <button type="submit">submit</button>
 
+  <Button variant="outlined" onClick={handleClick}>
+        click
+      </Button>
 
+  <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+              Student Record Addedd Successfully
+        </Alert>
+      </Snackbar>
 
+      {/* <Alert severity="success">This is a success message!</Alert> */}
 
 
 </form>
@@ -52,7 +96,4 @@ export default function Addstudent(props)
 
 
     );
-
-
-
-}
+    }

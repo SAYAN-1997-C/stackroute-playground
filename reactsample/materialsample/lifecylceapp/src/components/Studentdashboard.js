@@ -6,10 +6,38 @@ import './dashboard.css';
 import Newscard from "./newscard";
 import { Button } from "@material-ui/core";
 
+ 
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+
+
+
 export default function Studentdashboard()
 {
 
-    
+    const useStyles = makeStyles({
+        table: {
+          minWidth: 650,
+        },
+      });
+
+
+      const createData = (name, calories, fat, carbs, protein) =>{
+        return { name, calories, fat, carbs, protein };
+      }
+
+      const rows = [
+        createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
+        createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
+        createData('Eclair', 262, 16.0, 24, 6.0)
+      ]
+      const classes = useStyles();
 
     const[studentarr,setStudentarr]=useState([])
 
@@ -99,7 +127,7 @@ axios.delete(`http://localhost:3005/student/${childid}`)
 
 
 return(
-
+<div>
  <div className="clsdashboard">
       <h4> Dashboard </h4>
 
@@ -128,6 +156,40 @@ return(
 </div>
  </div>
 
+<TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            
+            <TableCell align="right">id</TableCell>
+            <TableCell align="right">name</TableCell>
+            <TableCell align="right">subject</TableCell>
+            
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {studentarr.map((row) => (
+            <TableRow key={row.id}>
+              <TableCell align="right">
+                {row.id}
+              </TableCell>
+              <TableCell align="right">{row.name}</TableCell>
+              <TableCell align="right">{row.subject}</TableCell>
+              
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+
+
+
+
+
+
+
+ </div>
 )
 
 }
