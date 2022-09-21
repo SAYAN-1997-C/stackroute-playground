@@ -6,11 +6,17 @@ import './App.css';
 import Header from './components/header';
 import Dashboard from './components/dashboard';
 import Notfound from './components/notfound';
+import Samplecondition from './components/sampleconditon';
+import SignUpDialog from './components/signup';
 
 function App() {
   return (
      <div>
-      <BrowserRouter>
+{/* <Samplecondition/> */}
+
+<SignUpDialog/>
+
+      {/* <BrowserRouter>
         <Header/>
          <Routes>
               <Route exact path="/" element={<Home/>}></Route>
@@ -25,7 +31,7 @@ function App() {
       
       
       
-      </BrowserRouter>
+      </BrowserRouter> */}
 
 
 
