@@ -7,6 +7,7 @@ export default function Login()
 {
 
     const [name,setName] = useState("");
+    const [password,setPassword] = useState("");
 
 
     let navigate = useNavigate();
@@ -18,8 +19,14 @@ export default function Login()
     const handleEvent = () =>
     {
        // localStorage.setItem("namekey", name);
-        sessionStorage.setItem("namekey", name);
-         navigate("/dashboard");
+       if(name==="admin" && password==="pass@123" )
+       {
+          sessionStorage.setItem("loggedin", true);
+          navigate("/dashboard");
+       }
+       else
+       sessionStorage.clear();
+
     }
 
 return (
@@ -28,7 +35,7 @@ return (
         <h1> Login Form </h1>
 
         <input type="text" value={name} onChange={(evt)=>setName(evt.target.value)}/>
-  
+        <input type="text" value={password} onChange={(evt)=>setPassword(evt.target.value)}/>
         <div>
        
         <button onClick={forwardEvt}> Back </button>

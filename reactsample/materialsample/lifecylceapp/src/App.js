@@ -8,27 +8,47 @@ import Login from './components/login';
 import Header from './components/header';
 import Footer from './components/footer';
 import Register from './components/register';
-
+import Home from './components/home';
+import PrivateRoute from './privateroute';
+import Newsdashboard from './components/newsdashboard';
 function App() {
   return (
     <div className="App">
       {/* <Lifecyclesample message="thursday"/> */}
 
+    <Newsdashboard/>
+
+
+{/* 
 
  <BrowserRouter>
       
       <Header/>
          <Routes>
             
-              
-              <Route exact path="/" element={<Login/>}> </Route>
-              <Route exact path="/dashboard" element={<Studentdashboard/>}> </Route>
-              <Route exact path="/addstudent" element={<Addstudent/>}></Route>
+              <Route exact path='/' element={<Home/>}> </Route>
+              <Route exact path="/login" element={<Login/>}> </Route>
+          
+              <Route exact path="/addstudent" element={
+                                                      <PrivateRoute>
+                                                             <Addstudent/>
+                                                      </PrivateRoute>
+
+                                                      }></Route>
               <Route exact path="/card" element={<Studentcard/>}></Route>
               <Route exact path="/register" element={<Register/>}></Route>
+               
+               <Route exact path="/dashboard" element={
+                                                      <PrivateRoute>
+                                                             <Studentdashboard/>
+                                                      </PrivateRoute>
+
+                                                      }>
+                </Route>                                 
+  
          </Routes>
       
-    </BrowserRouter>
+    </BrowserRouter> */}
 
 
     <Footer/>

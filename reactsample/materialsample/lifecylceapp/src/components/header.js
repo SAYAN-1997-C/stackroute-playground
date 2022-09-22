@@ -32,6 +32,12 @@ export default function Header()
                 {
                    navigate("/register") 
                 }
+
+                const callLogin = ()=>
+                {
+                   navigate("/login") 
+                }
+
  return(
 
 <div className={classes.root}>
@@ -44,6 +50,7 @@ export default function Header()
             News
           </Typography>
           <Button color="inherit" onClick={callRegister}>Register</Button>
+          <Button color="inherit" onClick={callLogin}>Login</Button>
         </Toolbar>
       </AppBar>
     </div>

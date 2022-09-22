@@ -1,0 +1,15 @@
+
+
+.clsnews
+{
+    display: flex;
+    flex-direction: column ;
+
+    width: 500px;
+}
+
+img
+{
+    width: 200px;
+    height: 150px;
+}
