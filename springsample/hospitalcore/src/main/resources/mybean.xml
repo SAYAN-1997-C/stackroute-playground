@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="hospitalbean" class="com.stackroute.hospitalcore.Hospital" scope="prototype">  
+    
+    <property name="hname" value="Apollo"></property>
+    <property name="years" value="31"></property>
+    
+    </bean>
+
+    <bean id="patientbean1" class="com.stackroute.hospitalcore.Patient">
+        
+        <property name="pname" value="Jain"/>
+        <property name="issues" value="Fever"/>
+        <!--  example of property based DI -->
+        <property name="hospital" ref="hospitalbean"></property>
+        
+        
+    </bean>
+    
+    
+    <bean id="patientbean2" class="com.stackroute.hospitalcore.Patient">
+        
+            <constructor-arg index="0" value="Ravi"/>
+      <constructor-arg index="1" value="Cold"/>
+      <constructor-arg index="2" ref="hospitalbean"/>
+        
+        
+    </bean>
+    
+       <bean id="doctorbean" class="com.stackroute.hospitalcore.Doctor">
+        
+     <property name="dname" value="Dr.Jones"/>
+        <property name="experience" value="10"/>
+        <!--  example of property based DI -->
+        <property name="hospitalobj" ref="hospitalbean"></property>
+        
+    </bean>
+    
+    
+    
+
+    <!-- more bean definitions go here -->
+
+</beans>

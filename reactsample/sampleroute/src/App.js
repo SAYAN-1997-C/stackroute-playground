@@ -8,13 +8,20 @@ import Dashboard from './components/dashboard';
 import Notfound from './components/notfound';
 import Samplecondition from './components/sampleconditon';
 import SignUpDialog from './components/signup';
+import Sampletest from './components/sampletest';
 
 function App() {
   return (
      <div>
 {/* <Samplecondition/> */}
 
-<SignUpDialog/>
+{/* <SignUpDialog/> */}
+<h1>Welcome</h1>
+
+
+  {/* <Sampletest topic="JEST"/> */}
+
+
 
       {/* <BrowserRouter>
         <Header/>
