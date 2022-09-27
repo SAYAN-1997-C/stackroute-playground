@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hospitalbean" class="com.stackroute.hospitalcore.Hospital" scope="prototype">  
+    <bean id="hospitalbean" class="com.stackroute.hospitalcore.Hospital" scope="singleton">  
     
     <property name="hname" value="Apollo"></property>
     <property name="years" value="31"></property>
