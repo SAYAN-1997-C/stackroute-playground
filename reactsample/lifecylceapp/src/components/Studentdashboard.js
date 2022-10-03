@@ -16,7 +16,7 @@ export default function Studentdashboard()
 
 const addEventHandler= (data)=>
 {
-  axios.post('http://localhost:3005/student',data,
+  axios.post('http://localhost:9091/student/add',data,
    {
     headers: {
         'Content-type': 'application/json'
@@ -62,7 +62,7 @@ axios.delete(`http://localhost:3005/student/${childid}`)
 
     useEffect(()=>{
  
-    axios.get('http://localhost:3005/student')
+    axios.get('http://localhost:9091/student/viewall')
     .then
     (
         (res)=>
