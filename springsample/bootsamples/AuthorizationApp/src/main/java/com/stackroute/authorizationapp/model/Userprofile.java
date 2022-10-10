@@ -6,7 +6,7 @@ import javax.persistence.Id;
 @Entity
 public class Userprofile {
 
-	@Id
+	    @Id
 		String mailid;
 		String password;
 		String name;

@@ -13,15 +13,22 @@ import PrivateRoute from './privateroute';
 import Newsdashboard from './components/newsdashboard';
 function App() {
   return (
-    <div className="App">
-      {/* <Lifecyclesample message="thursday"/> */}
+  //   <div className="App">
+ 
 
-    <Newsdashboard/>
+  //   { <Login/>}
 
 
-{/* 
+  //   <Footer/>
+ 
+  //   </div>
+  // );
 
- <BrowserRouter>
+
+
+//  { 
+  
+  <BrowserRouter>
       
       <Header/>
          <Routes>
@@ -48,13 +55,13 @@ function App() {
   
          </Routes>
       
-    </BrowserRouter> */}
+    </BrowserRouter>
+    
+  
+  // }
 
+  )
 
-    <Footer/>
- 
-    </div>
-  );
 }
 
 export default App;

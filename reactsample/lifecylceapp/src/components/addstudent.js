@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './addstud.css';
-
+import React from "react";
 export default function Addstudent(props)
 {
  

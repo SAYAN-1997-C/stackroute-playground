@@ -4,7 +4,9 @@ import Addstudent from "./addstudent";
 import Studentcard from "./studentcard";
 import './dashboard.css';
 import Newscard from "./newscard";
+ import React from "react";
 
+ 
 export default function Studentdashboard()
 {
 
@@ -39,7 +41,7 @@ err=>console.log("error " + err)
 
     const deleteEventhandler= (childid)=>
     {
-axios.delete(`http://localhost:3005/student/${childid}`)
+axios.delete(`http://localhost:3/student/${childid}`)
         .then
         (
             res=>

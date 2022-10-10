@@ -1,5 +1,7 @@
 
 import './card.css';
+import React from "react";
+
 
 export default function Studentcard(props)
 {
